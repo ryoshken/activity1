@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #5C6BC0;
+    outline: none;
+    box-shadow: 0 0 10px rgba(92, 107, 192, 0.3);
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 60px;
+}
+
+#show-password-btn1, #show-password-btn2 {
+    position: absolute;
+    right: -130px;
+    top: 35%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #5C6BC0;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #5C6BC0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3f4f8c;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-message {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 10;
+}
+
+.popup-message button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.popup-message button:hover {
+    background-color: #ddd;
+}

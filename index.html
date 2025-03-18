@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="validate.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-wrapper">
+            <h2>Create Account</h2>
+            <form id="registrationForm" method="POST" action="register.php" onsubmit="return validatePassword()">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="ex: abc@gmail.com" required>
+
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" id="show-password-btn1">Show</button>
+                </div>
+
+                <label for="confirm_password">Confirm Password</label>
+                <div class="password-container">
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                    <button type="button" id="show-password-btn2">Show</button>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="successMessage" class="popup-message">
+        <span id="messageText">Registration Successful!</span>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</body>
+</html>
